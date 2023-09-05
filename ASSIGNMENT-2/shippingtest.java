@@ -1,4 +1,4 @@
-public class shipping {
+public class shippingtest {
     public static void main(String[] args) {
         try {
             Item item1 = new Document(100.0, 20); // Document with 20 pages
