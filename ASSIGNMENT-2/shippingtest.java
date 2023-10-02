@@ -2,7 +2,7 @@ public class shippingtest {
     public static void main(String[] args) {
         try {
             Item item1 = new Document(100.0, 20); // Document with 20 pages
-            Item item2 = new Box(200.0, 0.5); // Box with 0.5 Kg weight (will throw an exception)
+            Item item2 = new Box1(200.0, 0.5); // Box with 0.5 Kg weight (will throw an exception)
 
             // Compute and print the cost for the items
             System.out.println("Cost for Document: $" + item1.computeCost());
@@ -53,10 +53,10 @@ class Document extends Item {
 }
 
 // Subclass for Box
-class Box extends Item {
+class Box1 extends Item {
     private double weight;
 
-    public Box(double distance, double weight) throws WeightBelowMinimumException {
+    public Box1(double distance, double weight) throws WeightBelowMinimumException {
         super(distance);
         if (weight < 1.0) {
             throw new WeightBelowMinimumException("Weight must be at least 1Kg");
